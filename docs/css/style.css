@@ -59,9 +59,9 @@ section {
 	display			: flex;
 }
 
-section:nth-child(odd) {
+/*section:nth-child(odd) {
 	background: #323946;
-}
+}*/
 
 /*********************************************************** Home*/
 
