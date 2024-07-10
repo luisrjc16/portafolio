@@ -19,6 +19,19 @@ header {
 	z-index			: 100;
 }
 
+section {
+	min-height		: 100vh;
+	justify-content	: center;
+	align-items		: center;
+	background		: #111418;
+	color			: #fff;
+	display			: flex;
+}
+
+section:nth-child(odd) {
+	background: #323946;
+}
+
 .logo {
 	font-size		: 25px;
 	color			: #fff;
@@ -50,23 +63,10 @@ nav a.active {
 	display		: none;
 }
 
-section {
-	min-height		: 100vh;
-	justify-content	: center;
-	align-items		: center;
-	background		: #111418;
-	color			: #fff;
-	display			: flex;
-}
-
-/*section:nth-child(odd) {
-	background: #323946;
-}*/
-
 /*********************************************************** Home*/
 
 .home-container{
-	padding		: 0px 13% 0px;
+	padding		: 80px 15% 0px;
 	position	: relative;
 	height		: 100vh;
 	width		: 100%;
@@ -78,7 +78,7 @@ section {
 .home-img img{
 	width			: 20vw;
 	border-radius	: 50%;
-	box-shadow		: 0 0 25px #00FF00;
+	box-shadow		: 0 0 20px #00FF00;
 	cursor			: pointer;
 	animation		: floatImage 4s ease-in-out infinite;
 	transition		: 0.4s ease;
@@ -170,6 +170,7 @@ section {
 	font-size		: 60px;
 	padding-bottom	: 15px;
 	color			: #32CD32;
+	text-align		: center;
 }
 
 .about-text p{
@@ -326,11 +327,11 @@ section {
 }
 
 /*********************************************************** Responsive*/
-@media screen and (max-width: 550px)  {
+/*@media screen and (max-width: 920px)  {
 	.home-container .home-img{
 		padding-top: 20%;
 	}
-}
+}*/
 
 @media screen and (max-width: 768px)  {
 	
@@ -371,12 +372,72 @@ section {
 	.navbar a::before {
 		display: none;
 	}
+		
+	.home-text h1{
+		font-size: 60px;
+	}
+	
+	.about-text h1{
+		font-size	: 40px;
+		text-align	: center;
+	}
+	
+	.about-text p{
+		font-size	: 12px;
+		width		: 100%;
+		text-align	: justify;
+	}
+	
+	.contact-container h1{
+		font-size: 40px;
+	}
+	
+	.contact-container p{
+		font-size	: 12px;
+	}
+	/*
+	.card-img {
+		width	: 280px;
+		height	: 160px;
+	}
+
+	.card-data {
+		width		: 220px;
+		padding		: .5rem 1rem;
+		box-shadow	: 0 8px 24px hsla(0, 0%, 0%, .15);
+		bottom		: 1rem;
+	}
+
+	.card-description {
+		font-size: 15px;
+	}
+
+	.card-title {
+		font-size: 12px;
+	}
+
+	.card-button {
+		font-size: 10px;
+	}
+	*/
+}
+
+@media screen and (max-width: 1020px) {
 	
 	.home-container{
 		display			: block;
-		flex-direction	: column-reverse;
 		text-align		: center;
-		padding-top		: 15%;
+		margin			: auto 0;
+		vertical-align	: middle;
+		height			: 100%;
+	}
+	
+	.home-img{
+		width: 100%;
+	}
+	
+	.home-text{
+		width: 100%;
 	}
 	
 	.home-text h6{
@@ -406,26 +467,14 @@ section {
 	}
 	
 	.about-container{
-		display			: inline-block;
-		flex-direction	: column-reverse;
-		text-align		: center;
+		display			: block;
+		margin			: auto 0;
+		vertical-align	: middle;
+		height			: 100%;
 	}
 	
 	.about-text{
-		width		: 100%;
-		text-align	: justify;
-	}
-	
-	.about-text h1{
-		font-size	: 30px;
-		text-align	: center;
-	}
-	
-	.about-text p{
-		font-size		: 12px;
-		margin-bottom	: 15px;
-		width			: 100%;
-		text-align		: justify;
+		width: 100%;
 	}
 	
 	.about-icons{
@@ -433,12 +482,12 @@ section {
 	}
 	
 	.flex-container1{
-		display		:flex;
+		display		: flex;
 		margin-left	: auto;
 	}
 	
 	.flex-container2{
-		display		:flex;
+		display		: flex;
 		margin-right: auto;
 	}
 	
@@ -447,40 +496,7 @@ section {
 		text-align	: center;
 		padding		: 0px 2px;
 	}
-	
-	.contact-container p{
-		font-size	: 15px;
-	}
-	
-	.card-img {
-		width	: 280px;
-		height	: 160px;
-	}
-
-	.card-data {
-		width		: 220px;
-		padding		: .5rem 1rem;
-		box-shadow	: 0 8px 24px hsla(0, 0%, 0%, .15);
-		bottom		: 1rem;
-	}
-
-	.card-description {
-		font-size: 15px;
-	}
-
-	.card-title {
-		font-size: 12px;
-	}
-
-	.card-button {
-		font-size: 10px;
-	}
-	
-}
-
-@media screen and (max-width: 1023px)  {
-
-	.about-container{
+	/*.about-container{
 		padding: 70px 13% 0px;
 	}
 	
@@ -493,32 +509,28 @@ section {
 	}
 	
 	.container-projects h1{
-		font-size: 40px;
-		text-align: center;
-	}
-	
-	.contact-container h1{
-		font-size: 40px;
-	}
+		font-size	: 40px;
+		text-align	: center;
+	}*/
 }
 
-@media screen and (min-width: 1120px) {
-  .container-projects {
-	height: 100vh;
-  }
+@media screen and (min-width: 1020px) {
+	.container-projects {
+		height: 100vh;
+	}
 
-  .card-container {
-	grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .card-img {
-	width: 348px;
-  }
-  
-  .card-data {
-	width: 316px;
-	padding-inline: 2.5rem;
-  }
+	.card-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.card-img {
+		width: 348px;
+	}
+
+	.card-data {
+		width			: 316px;
+		padding-inline	: 2.5rem;
+	}
 }
 /*(max-width: 480px)
 
