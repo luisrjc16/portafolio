@@ -94,7 +94,7 @@ section {
 	font-size	: 15px;
 	font-weight	: 600;
 	font-family	: cursive;
-	margin		: 5px 0;
+	padding-top	: 15px;
 }
 
 .home-text h1{
@@ -177,11 +177,23 @@ section {
 	Line-height	: 1.5;
 }
 
+.about-icons{
+	width	: 50%;
+	display	: flex;
+}
+
+.flex-container1{
+	margin-left: auto;
+}
+
+.flex-container2{
+	margin-right: auto;
+}
+
 .about-icons i{
-	font-size		: 50px;
-	margin-right	: 20px;
-	transition		: all 4s ease;
-	margin-bottom	: 10px;
+	font-size	: 90px;
+	transition	: all 4s ease;
+	padding		: 10px;
 }
 
 .about-icons i:hover{
@@ -314,38 +326,94 @@ section {
 }
 
 /*********************************************************** Responsive*/
-@media screen and (max-width: 480px)  {	
+@media screen and (max-width: 550px)  {
+	.home-container .home-img{
+		padding-top: 20%;
+	}
+}
+
+@media screen and (max-width: 768px)  {
+	
+	#menu-icon {
+		display: block;
+	}
+	
+	.navbar {
+		position	: absolute;
+		top			: 100%;
+		left		: 0;
+		width		: 100%;
+		padding		: 1rem 3%;
+		background	: #111418;
+		border-top	: .1rem solid rgba(0, 0, 0, .2);
+		box-shadow	: 0 .5rem 1rem rgba(0, 0, 0, .1);
+		display		: none;
+	}
+	
+	.navbar.active {
+		display: block;
+	}
+	
+	.navbar a {
+		display			: block;
+		font-size		: 1rem;
+		margin			: 1rem 0;
+		color			: #fff;
+		text-decoration	: none;
+		transition		: .3s;
+		text-align		: center;
+	}
+	
+	.navbar a.active {
+		color: #32CD32;
+	}
+	
+	.navbar a::before {
+		display: none;
+	}
+	
 	.home-container{
 		display			: block;
 		flex-direction	: column-reverse;
 		text-align		: center;
-		padding-top		: 30%;
+		padding-top		: 15%;
 	}
 	
 	.home-text h6{
-		font-size: 10px;
-	}
-	
-	.home-text h1{
-		font-size: 35px;
-	}
-	
-	.home-text h4 {
-		font-size: 10px;
-	}
-	
-	.home-text h4 span{
 		font-size: 15px;
 	}
 	
+	.home-text h1{
+		font-size: 50px;
+	}
+	
+	.home-text h4 {
+		font-size: 15px;
+	}
+	
+	.home-text h4 span{
+		font-size: 20px;
+	}
+	
 	.home-text p{
-		font-size: 10px;
+		font-size: 12px;
 	}
 	
 	.social-media a{
-		width: 32px;
-		height: 32px;
-		font-size: 1.5rem;
+		width		: 32px;
+		height		: 32px;
+		font-size	: 1.5rem;
+	}
+	
+	.about-container{
+		display			: inline-block;
+		flex-direction	: column-reverse;
+		text-align		: center;
+	}
+	
+	.about-text{
+		width		: 100%;
+		text-align	: justify;
 	}
 	
 	.about-text h1{
@@ -353,8 +421,31 @@ section {
 		text-align	: center;
 	}
 	
+	.about-text p{
+		font-size		: 12px;
+		margin-bottom	: 15px;
+		width			: 100%;
+		text-align		: justify;
+	}
+	
+	.about-icons{
+		width: 100%;
+	}
+	
+	.flex-container1{
+		display		:flex;
+		margin-left	: auto;
+	}
+	
+	.flex-container2{
+		display		:flex;
+		margin-right: auto;
+	}
+	
 	.about-icons i{				
-		font-size: 30px;
+		font-size	: 30px;
+		text-align	: center;
+		padding		: 0px 2px;
 	}
 	
 	.contact-container p{
@@ -387,68 +478,10 @@ section {
 	
 }
 
-@media screen and (max-width: 768px){
-	#menu-icon {
-		display: block;
-	}
-	
-	.navbar {
-		position	: absolute;
-		top			: 100%;
-		left		: 0;
-		width		: 100%;
-		padding		: 1rem 3%;
-		background	: #111418;
-		border-top	: .1rem solid rgba(0, 0, 0, .2);
-		box-shadow	: 0 .5rem 1rem rgba(0, 0, 0, .1);
-		display		: none;
-	}
-	
-	.navbar.active {
-		display: block;
-	}
-	
-	.navbar a {
-		display			: block;
-		font-size		: 1rem;
-		margin			: 1rem 0;
-		color			: #fff;
-		text-decoration	: none;
-		transition		: .3s;
-	}
-	
-	.navbar a.active {
-		color: #32CD32;
-	}
-	
-	.navbar a::before {
-		display: none;
-	}
-	
-	.about-container{
-		display			: block;
-		flex-direction	: column-reverse;
-		text-align		: center;
-	}
-	
-	.about-text{
-		width: 100%;
-		text-align: justify;
-	}
-	
-	.about-text p{
-		font-size		: 12px;
-		margin-bottom	: 15px;
-	}
-}
+@media screen and (max-width: 1023px)  {
 
-@media screen and (max-width: 900px)  {
 	.about-container{
 		padding: 70px 13% 0px;
-	}
-	
-	.home-text h1{
-		font-size: 40px;
 	}
 	
 	.about-text h1{
