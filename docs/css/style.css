@@ -28,9 +28,9 @@ section {
 	display			: flex;
 }
 
-section:nth-child(odd) {
+/*section:nth-child(odd) {
 	background: #323946;
-}
+}*/
 
 .logo {
 	font-size		: 25px;
@@ -85,9 +85,9 @@ nav a.active {
 }
 
 .home-img img:hover {
-	box-shadow: 0 0 25px #32CD32,
-				0 0 35px #32CD32,
-				0 0 45px #32CD32;
+	box-shadow: 0 0 10px #32CD32,
+				0 0 15px #32CD32,
+				0 0 20px #32CD32;
 }
 
 .home-text h6{
@@ -98,7 +98,7 @@ nav a.active {
 }
 
 .home-text h1{
-	font-size		: 60px;
+	font-size		: 100px;
 	Line-height		: 1.1;
 	font-weight		: 700;
 	margin			: 10px 0;
@@ -203,9 +203,12 @@ nav a.active {
 
 /*********************************************************** Projects*/
 .container-projects {
-	display			: grid;
-	margin-inline	: 1.5rem;
-	padding-block	: 5rem;
+	padding		: 0px 13% 0px;
+	position	: relative;
+	width		: 100%;
+	align-items	: center;
+	gap			: 3rem;
+	text-align	: center;
 }
 
 .container-projects h1{
@@ -214,58 +217,63 @@ nav a.active {
 	color			: #32CD32;
 }
 
-.card-container {
-	display: grid;
-	row-gap: 3.5rem;
+.row, .row > .column {
+  padding: 8px;
 }
 
-.card-article {
-	position	: relative;
-	padding		: 0px 10px;
+.column {
+  display: inline-block;
+  width: 30%;
 }
 
-.card-img {
-	width			: 328px;
-	border-radius	: 1.5rem;
+.content {
+  background-color	: rgba(33,180,20,0.1);
+  border			: 1px solid rgba(33,180,20,0.5);
+  padding			: 10px;
+  
 }
 
-.card-data {
-	width			: 280px;
-	background-color: #fff;
-	padding			: 1.5rem 2rem;
-	box-shadow		: 0 8px 24px hsla(0, 0%, 0%, .15);
-	border-radius	: 1rem;
-	position		: absolute;
-	bottom			: -2rem;
-	left			: 0;
-	right			: 0;
-	margin-inline	: auto;
-	opacity			: 0.9;
+.content:hover {
+	box-shadow: 0 0 5px #32CD32,
+				0 0 10px #32CD32,
+				0 0 15px #32CD32;
 }
 
-.card-description {
-	color			: blue;
-	display			: block;
-	font-size		: 15px;
-	margin-bottom	: .25rem;
+.content img{
+	width: 100%;
 }
 
-.card-title {
-	font-size		: 10px;
-	font-weight		: 500;
-	color			: blue;
-	margin-bottom	: .75rem;
+.content-text{
+	margin: 15px 0;
 }
 
-.card-button {
-	text-decoration	: none;
-	font-size		: 5px;
-	font-weight		: 500;
-	color			: blue;
+.content-text p{
+  color		: grey;
+  font-size	: 18px;
+  margin	: 10px 0;
 }
 
-.card-button:hover {
-	text-decoration: underline;
+.btn-git {
+  border			: none;
+  outline			: 0;
+  display			: inline-block;
+  padding			: 8px;
+  color				: white;
+  background-color	: #000;
+  text-align		: center;
+  cursor			: pointer;
+  width				: 100%;
+  font-size			: 18px;
+}
+
+.btn-git a {
+  text-decoration	: none;
+  font-size			: 1.5rem;
+  color				: #fff;
+}
+
+.btn-git:hover {
+  opacity: 0.7;
 }
 
 /*********************************************************** Contact*/
@@ -327,101 +335,6 @@ nav a.active {
 }
 
 /*********************************************************** Responsive*/
-/*@media screen and (max-width: 920px)  {
-	.home-container .home-img{
-		padding-top: 20%;
-	}
-}*/
-
-@media screen and (max-width: 768px)  {
-	
-	#menu-icon {
-		display: block;
-	}
-	
-	.navbar {
-		position	: absolute;
-		top			: 100%;
-		left		: 0;
-		width		: 100%;
-		padding		: 1rem 3%;
-		background	: #111418;
-		border-top	: .1rem solid rgba(0, 0, 0, .2);
-		box-shadow	: 0 .5rem 1rem rgba(0, 0, 0, .1);
-		display		: none;
-	}
-	
-	.navbar.active {
-		display: block;
-	}
-	
-	.navbar a {
-		display			: block;
-		font-size		: 1rem;
-		margin			: 1rem 0;
-		color			: #fff;
-		text-decoration	: none;
-		transition		: .3s;
-		text-align		: center;
-	}
-	
-	.navbar a.active {
-		color: #32CD32;
-	}
-	
-	.navbar a::before {
-		display: none;
-	}
-		
-	.home-text h1{
-		font-size: 60px;
-	}
-	
-	.about-text h1{
-		font-size	: 40px;
-		text-align	: center;
-	}
-	
-	.about-text p{
-		font-size	: 12px;
-		width		: 100%;
-		text-align	: justify;
-	}
-	
-	.contact-container h1{
-		font-size: 40px;
-	}
-	
-	.contact-container p{
-		font-size	: 12px;
-	}
-	/*
-	.card-img {
-		width	: 280px;
-		height	: 160px;
-	}
-
-	.card-data {
-		width		: 220px;
-		padding		: .5rem 1rem;
-		box-shadow	: 0 8px 24px hsla(0, 0%, 0%, .15);
-		bottom		: 1rem;
-	}
-
-	.card-description {
-		font-size: 15px;
-	}
-
-	.card-title {
-		font-size: 12px;
-	}
-
-	.card-button {
-		font-size: 10px;
-	}
-	*/
-}
-
 @media screen and (max-width: 1020px) {
 	
 	.home-container{
@@ -445,7 +358,7 @@ nav a.active {
 	}
 	
 	.home-text h1{
-		font-size: 50px;
+		font-size: 80px;
 	}
 	
 	.home-text h4 {
@@ -496,45 +409,66 @@ nav a.active {
 		text-align	: center;
 		padding		: 0px 2px;
 	}
-	/*.about-container{
-		padding: 70px 13% 0px;
+}
+
+@media screen and (max-width: 768px)  {
+	
+	#menu-icon {
+		display: block;
 	}
 	
-	.about-text h1{
+	.navbar {
+		position	: absolute;
+		top			: 100%;
+		left		: 0;
+		width		: 100%;
+		padding		: 1rem 3%;
+		background	: #111418;
+		border-top	: .1rem solid rgba(0, 0, 0, .2);
+		box-shadow	: 0 .5rem 1rem rgba(0, 0, 0, .1);
+		display		: none;
+	}
+	
+	.navbar.active {
+		display: block;
+	}
+	
+	.navbar a {
+		display			: block;
+		font-size		: 1rem;
+		margin			: 1rem 0;
+		color			: #fff;
+		text-decoration	: none;
+		transition		: .3s;
+		text-align		: center;
+	}
+	
+	.navbar a.active {
+		color: #32CD32;
+	}
+	
+	.navbar a::before {
+		display: none;
+	}
+		
+	.home-text h1, .about-text h1, .container-projects h1, .contact-container h1{
 		font-size: 40px;
 	}
 	
-	.about-icons i{
-		margin-right: 2px;
+	.about-text p{
+		font-size	: 12px;
+		width		: 100%;
+		text-align	: justify;
 	}
 	
-	.container-projects h1{
-		font-size	: 40px;
-		text-align	: center;
-	}*/
-}
-
-@media screen and (min-width: 1020px) {
-	.container-projects {
-		height: 100vh;
+	.contact-container p{
+		font-size	: 12px;
 	}
-
-	.card-container {
-		grid-template-columns: repeat(3, 1fr);
-	}
-
-	.card-img {
-		width: 348px;
-	}
-
-	.card-data {
-		width			: 316px;
-		padding-inline	: 2.5rem;
+	
+	.column {
+		width: 100%;
 	}
 }
-/*(max-width: 480px)
-
-(max-width: 1024px)*/
 
 /*********************************************************** Transiciones*/
 .reveal{
