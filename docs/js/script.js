@@ -25,10 +25,9 @@ window.onscroll = () => {
 		};
 	});
 	
-	/*Resposive Menu icon*/
-	/*remove menu icon navbar when click navbar Link (scroll)*/
 	menuIcon.classList.remove('bx-x');
 	navbar.classList.remove('active');
+	myFunction();
 };
 
 /*
@@ -49,4 +48,11 @@ function reveal(){
 			reveals[i].classList.remove('active');
 		}
 	}
+}
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
 }
