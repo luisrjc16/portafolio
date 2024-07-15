@@ -196,6 +196,12 @@ nav a.active {
 	Line-height	: 1.5;
 }
 
+.about-table{
+	display		: flex;
+	flex-wrap	: wrap;
+	gap			: .5rem;
+}
+
 .badge {
 	padding				: 2px 5px;
 	text-align			: center;
@@ -279,7 +285,8 @@ nav a.active {
 
 .content img{
 	width: 100%;
-	filter: blur(8px);
+	height: 150px;
+	filter: blur(1.5px);
 }
 
 .content-text{
@@ -288,7 +295,7 @@ nav a.active {
 
 .content-text p{
   color		: grey;
-  font-size	: 18px;
+  font-size	: 15px;
   margin	: 10px 0;
 }
 
@@ -506,6 +513,10 @@ nav a.active {
 	
 	.badge {
 		font-size: 10px;
+	}
+
+	.content img{
+		height: 200px;
 	}
 
 	.contact-container p{
